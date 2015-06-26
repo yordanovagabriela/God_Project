@@ -3,6 +3,11 @@
 
 using namespace std;
 
+Planet::Planet(string name) 
+{
+	this->name=name;
+}
+
 void Planet::destroy()
 {
 	population.erase(population.begin(), population.begin() + population.size());
