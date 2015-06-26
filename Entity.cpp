@@ -36,3 +36,8 @@ void Entity::Move()
 {
   this->setState(Moving);
 }
+
+void Entity::DoAction(Entity entityAttacted)
+{
+  this->Attack(entityAttacked);
+}
