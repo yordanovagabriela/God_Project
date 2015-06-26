@@ -6,7 +6,8 @@
 using namespace std;
 
 Entity::Entity() 
-{ this->name = " ";
+{ 
+  this->name = " ";
   this->energy = 0;
   this->power = 0;
   this->size = 0;
@@ -16,7 +17,8 @@ Entity::Entity()
 }
 
 Entity::Entity(string name, double energy, double power, double size, double weight, Point2D point, State state) 
-{ this->name = name;
+{ 
+  this->name = name;
   this->energy = energy;
   this->power = power;
   this->size = size;
@@ -25,11 +27,12 @@ Entity::Entity(string name, double energy, double power, double size, double wei
   this->state = state.Unknown;               
 }                   
 
-             
-void Entity::Attack(Entity entityAttacked) {
-     entityAttacked.setEnergy(entityAttacked.getEnergy() - this->getPower());
+void Entity::Attack(Entity entityAttacked) 
+{
+  entityAttacked.setEnergy(entityAttacked.getEnergy() - this->getPower());
 }
      
-void Entity::Move() {
-     this->setState(Moving);
-}                     
+void Entity::Move() 
+{
+  this->setState(Moving);
+}
