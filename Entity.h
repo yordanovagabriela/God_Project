@@ -3,13 +3,13 @@
 
 #include<string>
 
+#include "Point2D.h"
 #include "EntityType.h"
 #include "State.h"
 
 class Entity {
     
 private: 
-  //static RandomG nameR = new RandomG();
   string name, double energy, double power, double size, double weight, Point2D point, State state;
 
 public:
@@ -36,7 +36,7 @@ public:
     {
         return weight;
     };
-    double getPoint() const 
+    Point2D getPoint() const 
     {
         return point;
     };
@@ -73,9 +73,9 @@ public:
         this->state = state;
     };    
     
-    virtual void Attack(Entity entityAttacked);
+    virtual void Attack(Entity& entityAttacked);
     virtual void Move();
-    virtual void DoAction(Entity entityAttacked);
+    virtual void DoAction(Entity& entityAttacked);
 
 };
 
