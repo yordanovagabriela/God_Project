@@ -25,11 +25,11 @@ void RandomGenerator::getRandomDamage(Entity& smth)
 		smth.setEnergy(smth.getEnergy() - 3);
 		break;
 	case 2:
-		smth.setStrenght(smth.getStrenght() - 3);
+		smth.setPower(smth.getPower() - 3);
 		break;
 	case 3:
 		smth.setEnergy(smth.getEnergy() - 1);
-		smth.setStrenght(smth.getEnergy() - 1);
+		smth.setPower(smth.getEnergy() - 1);
 		break;
 	}
 }
