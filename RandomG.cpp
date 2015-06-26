@@ -15,7 +15,15 @@ Point2D RandomG::getRanodmCordinates()
 	return position;
 }
 
-void RandomGenerator::getRandomDamage(Entity& smth)
+double RandomG::RandomNumber() 
+{
+  double number;
+  srand(time(NULL));
+  number = rand() % 50 + 0;
+  return number;
+}
+
+void RandomG::getRandomDamage(Entity& smth)
 {
 	srand(time(NULL));                   
 	int code = rand() % 3 + 1;          //random number between 1-3
