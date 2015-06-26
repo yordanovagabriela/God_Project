@@ -22,20 +22,20 @@ Animal::Animal(string name, double energy, double power, double size, double wei
 void Animal::Eat()
 {
      RandomG food;
-     this->weight += food.RandomNumber();
-     this->setState(Eating);
+     weight += food.RandomNumber();
+     setState(Eating);
  }
  
 void Animal::Sleep()
 {
      RandomG food;
-     this->energy += food.RandomNumber();
-     this->setState(Sleeping);     
+     energy += food.RandomNumber();
+     setState(Sleeping);     
  } 
 
 void Animal::SearchingForFood()
 {
      RandomG food;
-     this->power -= food.RandomNumber();
-     this->setState(SearchingForFood);
+     power -= food.RandomNumber();
+     setState(SearchingForFood);
  }
