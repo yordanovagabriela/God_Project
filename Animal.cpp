@@ -1,5 +1,6 @@
 #include "Animal.h"
-#include<iosteam>
+#include "RandomG.h"
+#include <iosteam>
 
 using namespace std;
 
@@ -20,15 +21,21 @@ Animal::Animal(string name, double energy, double power, double size, double wei
 
 void Animal::Eat()
 {
+     RandomG food;
+     this->weight += food.RandomNumber();
      this->setState(Eating);
  }
  
 void Animal::Sleep()
 {
+     RandomG food;
+     this->energy += food.RandomNumber();
      this->setState(Sleeping);     
  } 
 
 void Animal::SearchingForFood()
 {
-     this->setState(SearchingForFood);     
+     RandomG food;
+     this->power -= food.RandomNumber();
+     this->setState(SearchingForFood);
  }
