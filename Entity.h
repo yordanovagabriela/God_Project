@@ -6,6 +6,7 @@
 #include "Point2D.h"
 #include "EntityType.h"
 #include "State.h"
+#include "RandomG.h"
 
 class Entity {
     
