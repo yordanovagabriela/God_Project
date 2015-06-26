@@ -29,12 +29,19 @@ Entity::Entity(string name, double energy, double power, double size, double wei
 
 void Entity::Attack(Entity entityAttacked) 
 {
-  entityAttacked.setEnergy(entityAttacked.getEnergy() - this->getPower());
+  RandomG r;
+  if (this->power>entityAttacked.getPower())
+  {
+    r.getRandomDamage(entityAttacked);
+  }
+  //this->setState(Attacking);
 }
      
 void Entity::Move() 
 {
-  this->setState(Moving);
+  Random r;	
+  this->position = r.getRandomCordinates();  //moving at random cordinates	
+  //this->setState(Moving);
 }
 
 void Entity::DoAction(State action)
