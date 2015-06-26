@@ -37,7 +37,19 @@ void Entity::Move()
   this->setState(Moving);
 }
 
-void Entity::DoAction(Entity entityAttacted)
+void Entity::DoAction(State action)
 {
-  this->Attack(entityAttacked);
+  switch (action)
+	{
+	  case Moving:
+		  Move();
+		  setState(Moving); 
+		  break;
+  	case Attacking:
+	  	setState(Attacking); 
+	  	break;
+	  case Unknown:
+	  	setState(Unknown); 
+	  	break;
+	}
 }
